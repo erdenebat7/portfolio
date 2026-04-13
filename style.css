@@ -57,6 +57,44 @@ form button {
   grid-column: 1 / -1;
 }
 
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 1em;
+}
+
+.projects article {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  gap: 1em;
+}
+
+.projects h2 {
+  margin: 0
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: 400%;
+}
+
+section {
+    font-family: Georgia, "Times New Roman", serif;
+    border-bottom: 1px solid oklch(80% 3% 200); 
+    padding-bottom: 1.5em;
+}
+
+section article {
+    border-left: 3px solid var(--color-accent);
+    padding-left: 1em;
+    margin-bottom: 1.5em;
+}
+
 
 
 
