@@ -1,16 +1,7 @@
 body {
-  /* Set line height to 1.5 times the font size
-	   and use the OS’s UI font as the website font
-	 */
   font: 100%/1.5 system-ui;
   max-width: 100ch;
   margin-inline: max(1em, (100% - 100ch) / 2);
-}
-
-nav {
-  display: flex;
-  margin-bottom: 2em;
-  border-bottom: 1px solid oklch(80% 3% 200);
 }
 
 nav a {
@@ -21,24 +12,9 @@ nav a {
   padding: 0.5em;
 }
 
-nav a:hover {
-  border-bottom: 0.4em solid var(--color-ascent);
-  padding-bottom: 0.1em; 
-  background-color: oklch(from var(--color-accent) 95% 5% h);
-}
-
-nav a.current {
-  border-bottom: 0.4em solid oklch(80% 3% 200);
-  padding-bottom: 0.1em;
-}
-
 :root {
   --color-accent: oklch(65% 50% 0);
   accent-color: var(--color-accent);
-}
-
-input, textarea, button {
-  font: inherit;
 }
 
 form {
@@ -95,6 +71,37 @@ section article {
     margin-bottom: 1.5em;
 }
 
+html {
+  color-scheme: light dark;
+}
 
+nav {
+  --border-color: oklch(50% 10% 200 / 40%);
+  display: flex;
+  margin-bottom: 2em;
+  border-bottom: 1px solid var(--border-color);
+}
 
+nav a:hover {
+  border-bottom: 0.4em solid var(--color-accent);
+  padding-bottom: 0.1em;
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
+}
+
+nav a.current {
+  border-bottom: 0.4em solid var(--border-color);
+  padding-bottom: 0.1em;
+}
+
+input, textarea, button, select {
+  font: inherit;
+}
+
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 80%;
+  font-family: inherit;
+}
 
