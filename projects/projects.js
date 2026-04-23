@@ -11,3 +11,5 @@ const projectsTitle = document.querySelector('.projects-title');
 if (projectsTitle) {
     projectsTitle.textContent = `${projects.length} Projects`;
 }
+
+

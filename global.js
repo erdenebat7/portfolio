@@ -126,3 +126,7 @@ export function renderProjects(project, containerElement, headingLevel = 'h2') {
     containerElement.appendChild(article);
   } 
 }
+
+export async function fetchGitHubData(username) {
+  return fetchJSON(`https://api.github.com/users/${erdenebat7}`);
+}
