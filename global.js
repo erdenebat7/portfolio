@@ -111,7 +111,7 @@ export async function fetchJSON(url) {
   }
 }
 
-export function renderProjects(project, containerElement, headingLevel = 'h2') {
+export function renderProjects(projects, containerElement, headingLevel = 'h2') {
   containerElement.innerHTML = '';
   
   for (let project of projects) {
@@ -128,5 +128,5 @@ export function renderProjects(project, containerElement, headingLevel = 'h2') {
 }
 
 export async function fetchGitHubData(username) {
-  return fetchJSON(`https://api.github.com/users/${erdenebat7}`);
+  return fetchJSON(`https://api.github.com/users/${username}`);
 }
