@@ -50,6 +50,12 @@ form button {
   margin: 0
 }
 
+.project-year {
+  font-family: Baskerville;
+  font-variant-numeric: oldstyle-nums;
+  color: color-mix(in oklch, canvasText, canvas 40%);
+}
+
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
   text-wrap: balance;
@@ -118,4 +124,61 @@ input, textarea, button, select {
 #profile-stats dd {
   grid-row: 2;
   margin: 0;
+}
+
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+  overflow: visible;
+}
+
+.legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap: 1em;
+  flex: 1; 
+  margin: 0;
+  padding: 1.5em;
+  border: 1px solid oklch(50% 10% 200 / 40%); 
+  border-radius: 8px;
+  background-color: color-mix(in oklch, canvas, canvasText 2%); 
+  list-style: none; 
+}
+
+.legend li {
+  display: flex;
+  align-items: center; 
+  gap: 0.5em;
+}
+
+.swatch {
+  display: inline-block;
+  width: 1em;
+  aspect-ratio: 1 / 1;
+  background-color: var(--color);
+  border-radius: 50%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 1 em;
+}
+
+svg:has(path:hover) 
+  path:not(:hover) {
+    opacity: 0.5;
+  }
+
+path {
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+
+  &selected:is(path) {
+    fill: var(--color);
+  }
 }
