@@ -115,20 +115,25 @@ export async function fetchJSON(url) {
 export function renderProjects(projects, containerElement, headingLevel = 'h2') {
   containerElement.innerHTML = '';
   
+  const isSubpage = location.pathname.includes('/projects/');
+  
   for (let project of projects) {
     const article = document.createElement('article');
 
+    let imagePath = project.image;
+    
+    if (!imagePath.startsWith('http') && isSubpage) {
+        imagePath = '../' + imagePath;
+    }
+
     article.innerHTML = `
       <${headingLevel}>${project.title}</${headingLevel}>
-      <img src="${project.image}" alt="${project.title}">
-      <div class="project-details">
-        <p>${project.description}</p>
-        <p class="project-year">${project.year}</p>
-      </div>
+      <img src="${imagePath}" alt="${project.title}">
+      <p>${project.description}</p>
     `;
 
     containerElement.appendChild(article);
-  } 
+  }
 }
 
 export async function fetchGitHubData(username) {

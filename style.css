@@ -37,6 +37,7 @@ form button {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
   gap: 1em;
+  align-items: start;
 }
 
 .projects article {
@@ -263,4 +264,11 @@ dl.info[hidden]:not(:hover, :focus-within) {
   circle.selected {
     fill: #ff6b6b;
   }
+}
+
+article img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
 }
