@@ -25,11 +25,5 @@
         "image": "images/mapbox.png",
         "description": "Developed an interactive geospatial visualization to analyze bike-sharing trends, station density, and flow of traffic. Integrated live API data with MapBox GL JS, identifying high-traffic stations.",
         "url": "https://erdenebat7.github.io/biketracker/"
-    },
-    {
-        "title": "-----",
-        "year": "XXXX",
-        "image": "",
-        "description": ""
     }
 ]

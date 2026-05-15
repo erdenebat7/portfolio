@@ -66,12 +66,6 @@ h1 {
   font-size: 400%;
 }
 
-section {
-    font-family: Georgia, "Times New Roman", serif;
-    border-bottom: 1px solid oklch(80% 3% 200); 
-    padding-bottom: 1.5em;
-}
-
 section article {
     border-left: 3px solid var(--color-accent);
     padding-left: 1em;
@@ -271,4 +265,96 @@ article img {
   height: auto;
   object-fit: cover;
   display: block;
+}
+
+header address {
+  font-style: normal;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em 1.5em; 
+  color: color-mix(in oklch, canvasText, canvas 30%);
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+header address p {
+  margin: 0;
+}
+
+header address a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 1px;
+}
+
+
+section {
+  margin-top: 2.5em; 
+  font-family: Georgia, "Times New Roman", serif;
+  border-bottom: 1px solid oklch(80% 3% 200); 
+  padding-bottom: 1.5em;
+
+}
+
+section h2 {
+  color: var(--color-accent); 
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 1.4em;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+
+section article header {
+  margin-bottom: 0.75em;
+}
+
+section article header h3 {
+  margin: 0 0 0.2em 0;
+  font-size: 1.25em;
+}
+
+
+section article header p {
+  margin: 0;
+  font-size: 0.95em;
+  color: color-mix(in oklch, canvasText, canvas 20%);
+}
+
+
+section ul {
+  padding-left: 1.2em; 
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+
+section li {
+  margin-bottom: 0.4em; 
+  line-height: 1.6;
+}
+
+/* Skills */
+#skills ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#skills li {
+  margin-bottom: 0.8em;
+}
+
+
+/* Project URL Header */
+.projects article h2 a, 
+.projects article h3 a {
+  text-decoration: none;
+  color: inherit; 
+}
+
+.projects article h2 a:hover, 
+.projects article h3 a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent);
+  text-underline-offset: 4px;
 }
